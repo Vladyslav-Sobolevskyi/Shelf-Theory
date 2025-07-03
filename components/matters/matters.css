@@ -1,0 +1,142 @@
+.matters {
+  margin-top: 140px;
+  overflow: hidden;
+}
+
+.matters .title {
+  position: relative;
+  font-family: var(--font-main);
+  color: var(--color-black);
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.matters .title::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  height: 1px;
+  width: 200px;
+  background-color: var(--color-black);
+  margin-left: 10px;
+}
+
+.matters .text {
+  font-family: var(--font-main);
+  color: var(--color-black);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.matters .rectangle {
+  background-color: var(--color-background);
+}
+
+.matters .content-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.matters .content-block .content {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 30px;
+}
+
+.matters .content-block .rectangle {
+  z-index: -1;
+  position: absolute;
+  top: -150px;
+  left: -130px;
+  width: 410px;
+  height: 410px;
+}
+
+.matters .background {
+  position: relative;
+}
+
+.matters .background .rectangle {
+  z-index: -1;
+  position: absolute;
+  top: 50px;
+  left: -50px;
+  width: 400px;
+  height: 400px;
+}
+
+.matters .content-block:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-top: 150px;
+}
+
+.matters .content-block:nth-child(even) .rectangle{
+  z-index: -1;
+  position: absolute;
+  top: -150px;
+  left: 260px;
+  width: 410px;
+  height: 410px;
+}
+
+.matters .background:nth-child(even) .rectangle{
+  top: 50px;
+  left: 150px;
+}
+
+@media (max-width: 960px){
+  .matters .content-block {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .matters .content-block:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .matters .content-block .content .rectangle {
+    display: none;
+  }
+
+  .matters .content-block .content {
+    text-align: center;
+    gap: 600px;
+  }
+
+  .matters .title {
+    font-size: 24px;
+  }
+
+  .matters .title::after {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 35%;
+    height: 1px;
+    width: 100px;
+    background-color: var(--color-black);
+    margin-left: 10px;
+  }
+
+  .matters .background {
+    position: absolute;
+    top: 100px;
+  }
+
+  .matters .background:nth-child(even) .rectangle{
+    top: 300px;
+    left: 0px;
+    width: 100%;
+  }
+} 

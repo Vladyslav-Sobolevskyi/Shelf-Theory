@@ -1,0 +1,226 @@
+.hero {
+  padding-top: 168px;
+  position: relative;
+  height: 651px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero .hero-background {
+    position: absolute;
+    inset: 0;
+    
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.hero .background-rectangle {
+    position: absolute;
+    top: 30%;
+    width: 484px;
+    height: 484px;
+    background-color: var(--color-background);
+}
+
+.hero .background-photo {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("../../assets/photo/hero-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero .container {
+    position: relative;
+    top: 0;
+}
+
+.hero .hero-content {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h4 {
+  font-family: var(--font-main);
+  color: var(--color-primary);
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  font-family: var(--font-main);
+  color: var(--color-black);
+
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.hero .badges {
+  width: 100%;
+}
+
+.hero  .badges-item {
+  font-family: var(--font-main);
+  color: var(--color-black);
+  background: var(--color-brown-dark);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  
+  display: inline-block;
+
+  padding: 3px 14px;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  margin-right: 7px;
+}
+
+.hero .button-block {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.hero .button-block p {
+  font-family: var(--font-main);
+  color: var(--color-grey);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero-button {
+  font-family: var(--font-main, sans-serif);
+  background: var(--color-primary, #F3651C);
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--color-secondary);
+  height: 60px;
+  width: 281px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.16);
+  
+  color: #fff;
+  
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-text {
+  flex: 1 1 auto;
+  text-align: center;
+  z-index: 2;
+}
+
+.button-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-secondary, #FA9059);
+  height: 100%;
+  width: 50px; /* ширина правой цветной части */
+  flex-shrink: 0;
+  position: relative;
+}
+
+.button-arrow::after {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 14px;
+  background: url("../../assets/icon/arrow.svg") center/contain no-repeat;
+}
+
+.hero .image-caption {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  padding: 40px 40px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hero .image-caption a {
+  padding: 30px 40px;
+  border: 2px solid var(--white);
+  color: var(--color-primary);
+  background-color: var(--color-black);
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-content h4, .hero-content h1, .hero-content p {
+    color: var(--color-white);
+  }
+  .hero .container {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero .hero-content {
+    align-items: center;
+    text-align: center;
+
+  }
+  .hero .badges {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hero .button-block {
+    align-items: center;
+  }
+  .hero .hero-background {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .background-rectangle {
+    display: none;
+  }
+
+  .hero .background-photo {
+    width: 100%;
+  }
+
+  .hero .image-caption {
+    display: none;
+  }
+}

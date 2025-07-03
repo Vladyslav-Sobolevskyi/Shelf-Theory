@@ -1,0 +1,208 @@
+.process {
+    margin-top: 140px;
+    margin-bottom: 140px;
+    height: auto;
+    overflow: visible;
+}
+
+.process .container {
+    overflow: visible;
+}
+
+.process .content {
+    height: auto;
+    min-height: fit-content;
+    overflow: visible;
+}
+
+.process .title {
+    font-family: var(--font-main);
+    color: var(--color-black);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+
+    position: relative;
+}
+
+.process .title::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 200px;
+    background-color: var(--color-black);
+    margin-left: 50px;
+}
+
+.process .process-list {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 45px;
+    height: auto;
+    /* min-height: fit-content; */
+}
+
+.process-item {
+    position: relative;
+    min-height: 300px;
+    overflow: visible;
+}
+
+.process .process-item .icon {
+    position: absolute;
+    left: 22px;
+    width: 90px;
+    height: 90px;
+    background-color: var(--color-black);
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
+}
+
+.process .process-item .icon::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 29px;
+    background-image: url("../../assets/icon/arrow-orange.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.process .process-item:nth-child(1) .icon {
+    background-image: url("../../assets/icon/support.png");
+}
+
+.process .process-item:nth-child(2) .icon {
+    background-image: url("../../assets/icon/tools.png");
+}
+
+.process .process-item:nth-child(3) .icon {
+    background-image: url("../../assets/icon/3281142.png");
+}
+
+.process .process-item:nth-child(4) .icon {
+    background-image: url("../../assets/icon/maintenance.png");
+}
+
+.process .process-item .paragraph {
+    z-index: -1;
+    position: absolute;
+    top: 50px;
+    padding: 64px 23px 40px 23px;
+    border: 1px solid var(--color-brown-dark);
+    color: var(--color-brown);
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: 140px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.process .process-item .number {
+    position: absolute;
+    top: 240px;
+    right: -14px;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-brown-light);
+    border: 1px solid var(--color-brown);
+}
+
+.process .process-item .number p {
+
+    font-family: var(--font-main);
+    color: var(--color-white);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@media (max-width: 1200px) {
+    .process .process-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 45px;
+        row-gap: 45px;
+        height: auto;
+    }
+
+    .process .process-item .paragraph {
+        position: relative;
+        min-height: 220px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 768px) {
+    .process .process-list {
+        grid-template-columns: 1fr;
+        column-gap: 45px;
+        row-gap: 45px;
+        height: auto;
+    }
+
+    .process .process-item .paragraph {
+        position: relative;
+        min-height: 220px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .process .title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .process .title::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 42%;
+        height: 1px;
+        width: 100px;
+        margin: 0;
+    }
+
+    .process .process-item .icon::after {
+        content: "";
+        position: absolute;
+        transform: rotate(90deg);
+        top: 290px;
+        left: 25px;
+        width: 40px;
+        height: 29px;
+        background-image: url("../../assets/icon/arrow-orange.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .process .process-item:last-of-type .icon::after {
+        display: none;
+    }
+
+    .process .process-item .paragraph {
+        min-height: none;
+        padding: 60px;
+        margin: 0;
+        width: 100%;
+        height: fit-content;
+    }
+}

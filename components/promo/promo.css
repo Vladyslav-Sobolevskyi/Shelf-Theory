@@ -1,0 +1,184 @@
+.promo {
+    margin-top: 70px;
+}
+
+.promo .container {
+    padding: 0 62px;
+}
+
+.promo .ask-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.promo .text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.promo .paragraph {
+    color: var(--color-black);
+    font-family: var(--font-main);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.promo .to-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.promo .to-label p{
+    color: var(--color-primary);
+    font-family: var(--font-main);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.promo .to-label span {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-primary);
+}
+
+.promo .ribbon {
+    position: relative;
+    /* height: 165px; */
+    padding: 30px 36px 30px 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        url("../../assets/icon/qubes-bg.png"),
+        linear-gradient(90deg, var(--color-brown-dark) 6.16%, var(--color-primary) 100%) 
+    ;
+}
+
+.promo .ribbon::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid var(--color-white);
+}
+
+.promo .ribbon h3 {
+    color: var(--color-white);
+    font-family: var(--font-main);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 114%; /* 41.04px */
+    text-transform: uppercase;
+
+    padding: 30px 20px;
+    border: 1px dashed var(--color-white);
+}
+
+.promo .theory {
+    margin: 100px 62px 0 62px;
+    padding: 100px 70px 70px 70px;
+    text-align: center;
+    /* margin: 0 62px; */
+    background-color: var(--color-background);
+    /* position: relative; */
+    /* overflow: visible; */
+}
+
+.promo .theory .content {
+    /* width: 100%; */
+    height: 464px;
+    border: 1px solid var(--color-black);
+    position: relative;
+    padding: 0 40px;
+}
+
+.promo .theory .title {
+    position: absolute;
+    top: -30px;
+    left: 8%;
+    padding: 0 40px;
+    font-family: var(--font-main);
+    color: var(--color-black);
+    background-color: var(--color-background);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.promo .theory img {
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    display: block; 
+}
+
+@media (max-width: 1000px){
+    .promo .theory .content {
+        height: 350px;
+    }
+} 
+
+@media (max-width: 920px) {
+    .promo .theory .content {
+        height: 200px;
+    }
+    .promo .ask-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .promo .text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .promo .ribbon::before {
+    content: "";
+    position: absolute;
+    left:  48%;
+    top: -15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid var(--color-white);
+    transform: rotate(90deg);
+    }
+
+    .promo .ribbon h3 {
+        width: 100%;
+        margin-top: 20px;
+        padding: 30px 20px;
+        border: 1px dashed var(--color-white);
+    }
+
+    .promo .theory {
+        margin: 60px 0px 0px 0px;
+        padding: 100px 30px 30px 30px;
+    }
+}
+@media (max-width: 769px) {
+    .promo .theory .title {
+        font-size: 24px;
+    }
+}
+

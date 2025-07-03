@@ -1,0 +1,153 @@
+.experience {
+    margin-top: 144px;
+}
+
+.experience .title-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.experience .title {
+    text-align: center;
+    font-family: var(--font-main);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    color: var(--color-black);
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.experience .title-container::after {
+    content: "";
+    display: block;
+    width: 170px;
+    height: 1px;
+    background-color: var(--color-black);
+    margin: 0 auto;
+    margin-top: 22px;
+}
+
+.experience .content {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 97px;
+}
+
+.experience .background {
+    position: relative;
+    width: 90%;
+}
+
+
+.experience .rectangle {
+    z-index: -1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: -40px;
+    left: 450px;
+    width: 259px;
+    height: 451px;
+    background-color: var(--color-background);
+}
+
+.experience .content .paragraph {
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+@media (max-width: 920px) {
+    .experience {
+        margin-top: 300px;
+    }
+
+    .experience .title {
+        font-size: 24px;
+    }
+
+    .experience .title-container::after {
+        width: 100px;
+    }
+
+    .experience .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        /* расстояние между блоками, по желанию */
+        width: 100%;
+    }
+
+    .experience .rectangle {
+        z-index: -1;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0px;
+        left: 0px;
+        bottom: 0;
+        width: 100%;
+        height: 700px;
+        background-color: var(--color-background);
+    }
+    .experience .background {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .experience .background img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        /* если нужно обрезать */
+        max-width: 100%;
+    }
+
+    .experience .content .paragraph {
+        width: 90%;
+    }
+}
+
+@media (max-width: 720px) {
+    .experience .rectangle {
+        height: 650px;
+    }
+}
+
+@media (max-width: 650px) {
+    .experience {
+        margin-top: 400px;
+    }
+     .experience .rectangle {
+        height: 600px;
+    }
+}
+
+@media (max-width: 530px) {
+    .experience {
+        margin-top: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .experience {
+        margin-top: 550px;
+    }
+}
+
+@media (max-width: 450px) {
+    .experience {
+        margin-top: 650px;
+    }
+}

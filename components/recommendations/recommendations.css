@@ -1,0 +1,121 @@
+.recommendations {
+  position: relative;
+  width: 100%;
+  margin: 155px 0px;
+}
+
+.gradient-border {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(270deg, rgba(180, 180, 180, 0.00) 0%, #B4B4B4 50%, rgba(180, 180, 180, 0.00) 100%);
+
+}
+.gradient-border.top {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.gradient-border.bottom {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.container {
+  text-align: center;
+}
+
+.recommendations .title {
+  font-family: var(--font-main);
+  color: var(--color-black);
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.recommendations .paragraph {
+  margin-top: 20px;
+  font-family: var(--font-main);
+  color: var(--color-brown);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.carousel-btn {
+  border: 1px solid var(--color-grey);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn img {
+  width: 22px;
+  height: 22px;
+  transform: rotate(0deg);
+}
+
+
+.carousel-viewport {
+  width: 90%;
+  max-width: 70%;
+  min-height: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* изменено */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 32px;
+  min-height: 80px;
+  align-items: center;
+  justify-content:space-around;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.carousel-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  min-width: 80px;
+  max-width: 200px;
+  background: #fff;
+}
+.carousel-logo img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.indicator {
+  width: 14px;
+  height: 14px;
+  background: var(--color-light-grey);
+  display: inline-block;
+  transition: background 0.2s, border 0.2s;
+}
+.indicator.active {
+  background: var(--color-primary);
+}

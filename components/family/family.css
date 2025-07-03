@@ -1,0 +1,140 @@
+.family {
+    margin-top: 120px;
+    padding: 80px 0;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    align-items: center;
+    position: relative;
+}
+
+.family::before {
+    content: url("../../assets/icon/qubes-bg_2.png");
+    position: absolute;
+    left: 110px;
+}
+
+.family::after {
+    content: url("../../assets/icon/qubes-bg_2.png");
+    position: absolute;
+    right: 110px;
+    transform: rotate(180deg);
+}
+
+.family .title {
+    font-family: var(--font-main);
+    color: var(--color-black);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.family .title::after {
+    content: "";
+    display: block;
+    width: 170px;
+    height: 1px;
+    background-color: var(--color-black);
+    margin: 0 auto;
+    margin-top: 22px;
+}
+
+.family .subtitle {
+    font-family: var(--font-main);
+    color: var(--color-primary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.family .subtitle span {
+    font-weight: 700;
+}
+
+.family .paragraph {
+    font-family: var(--font-main);
+    color: var(--color-black);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    max-width: 900px;
+}
+
+.family .button {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.family .button:hover {
+    background-color: var(--color-secondary);
+
+}
+
+.family .button::before {
+    content: url("../../assets/icon/quotation.svg");
+    position: absolute;
+    bottom: -22px;
+    height: 22px;
+    width: auto;
+    left: -50px;
+}
+
+.family .button::after {
+    content: url("../../assets/icon/quotation.svg");
+    position: absolute;
+    top: -22px;
+    height: 22px;
+    width: auto;
+    right: -50px;
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .family {
+       padding: 80px;
+    }
+
+    .family::after {
+        display: none;
+    }
+    .family::before {
+        display: none;
+    }
+
+    .family .title {
+        font-size: 24px;
+    }
+
+    .family .title::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 1px;
+        background-color: var(--color-black);
+        margin: 0 auto;
+        margin-top: 22px;
+    }
+}
